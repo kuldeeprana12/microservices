@@ -1,0 +1,39 @@
+setting up Zipkin to listen to rabbit MQ 
+set RABBIT_URI=amqp://localhost
+java -jar zipkin-server-2.21.1-exec.jar
+
+
+In case you are on windows  Operating system So you need to follow below steps.
+
+- Opened command prompt using the administrative mode
+
+2. Go to sbin directory. Execute command "SET HOMEDRIVE=C:"
+
+3- Open the command prompt & go to below location. C:\Program Files\RabbitMQ Server\rabbitmq_server-3.8.2\sbin
+
+4- Hit below command: rabbitmq-plugins enable rabbitmq_management.
+
+This command will actually run rabbitmq-plugins batch file which is present inside sbin folder.
+
+5- Now, restart the RabbitMQ service.
+
+6- http://localhost:15672
+
+if you still had any problem to run the plugin then :
+
+2- Run RabbitMQ sbin command prompt as administrator.
+
+3- Run "rabbitmq-service remove"
+
+4- Run "rabbitmq-service install"
+
+
+
+after restarting the service access to the http://localhost:15672
+
+SET RABBIT_URI and execute java jar
+
+SET RABBIT_URI=amqp://localhost
+java -jar zipkin-server-2.5.2-exec.jar
+Could you please try the above option, I am happy to assist you further.
+
